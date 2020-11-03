@@ -1,4 +1,4 @@
-package com.lingyibyte.github;
+package com.lewisbyte.github;
 
 import javax.annotation.processing.*;
 import javax.lang.model.SourceVersion;
@@ -6,14 +6,14 @@ import javax.lang.model.element.TypeElement;
 import java.util.Set;
 
 /**
- *
  * @author lewis
- *
  */
 
 @SupportedAnnotationTypes("*")
-@SupportedSourceVersion(SourceVersion.RELEASE_6)
+@SupportedSourceVersion(SourceVersion.RELEASE_8)
 public class NameCheckProcessor extends AbstractProcessor {
+
+    private NameChecker nameChecker;
 
 
     /**
@@ -30,6 +30,7 @@ public class NameCheckProcessor extends AbstractProcessor {
     @Override
     public synchronized void init(ProcessingEnvironment processingEnv) {
         super.init(processingEnv);
+        nameChecker = new NameChecker(processingEnv.getMessager());
     }
 
     /**
@@ -40,6 +41,9 @@ public class NameCheckProcessor extends AbstractProcessor {
      */
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
+        if (!roundEnv.processingOver()) {
+            roundEnv.getRootElements().forEach(element -> nameChecker.checkName(element));
+        }
         return false;
     }
 }
