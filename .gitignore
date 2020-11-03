@@ -1,0 +1,51 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.factorypath
+.settings
+.springBeans
+.metadata
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### Mac OS ###
+
+.DS_Store
+
+### log
+LOG_PATH_IS_UNDEFINED/*
+/bin/
+*.classpath
+
+### 自定义 ###
+target/
+.classpath
+.project
+.settings/
+.springBeans
+.metadata/
+*.ipr
+*.iws
+*.iml
+.idea/
+.idea
+../.idea/
+*.swp
+*.swo
+*.swn
+*.DS_Store
+*.classpath
+
