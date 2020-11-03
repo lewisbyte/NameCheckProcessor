@@ -1,4 +1,4 @@
-package com.qq1367212627.github;
+package com.lingyibyte.github;
 
 import javax.annotation.processing.*;
 import javax.lang.model.SourceVersion;
