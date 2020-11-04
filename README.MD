@@ -9,6 +9,11 @@ Names of the annotation processors to run. This bypasses the default discovery p
 
 ```
 
+* 测试代码
+```bash
+javac -cp target/classes/ -processor com.lewisbyte.github.NameCheckProcessor src/main/java/com/lewisbyte/example/BAD_CODE.java 
+```
+
 #### 目标
 * 1. 完成基本的代码规范扫描功能实现（TODO）
 * 2. 改造程序，将程序重构成一个maven 插件，goal目标在maven 生命周期中的` <phase>generate-sources</phase> `项目编译期，作为maven插件在项目中使用（TODO）
