@@ -11,6 +11,7 @@ Names of the annotation processors to run. This bypasses the default discovery p
 
 * 测试代码
 ```bash
+maven clean install
 javac -cp target/classes/ -processor com.lewisbyte.github.NameCheckProcessor src/main/java/com/lewisbyte/example/BAD_CODE.java 
 ```
 
